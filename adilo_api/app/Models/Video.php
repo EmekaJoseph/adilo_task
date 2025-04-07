@@ -7,9 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
 
+    protected $guarded = ['id'];
+    public $primaryKey = 'id';
+    public $timestamps  = true;
 
-    public function videos()
+    public function category()
     {
-        return $this->hasMany(Video::class);
+        return $this->belongsTo(Category::class,);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
