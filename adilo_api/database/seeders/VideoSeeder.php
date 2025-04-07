@@ -20,7 +20,7 @@ class VideoSeeder extends Seeder
         $users = User::all();
         $categories = Category::all();
 
-        foreach (range(1, 5) as $i) {
+        foreach (range(1, 20) as $i) {
             Video::create([
                 'title' => "Sample Video $i",
                 'description' => "Description for Video $i",

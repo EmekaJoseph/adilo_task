@@ -17,6 +17,8 @@ class CategorySeeder extends Seeder
             ['name' => 'Education'],
             ['name' => 'Entertainment'],
             ['name' => 'Technology'],
+            ['name' => 'Sports'],
+            ['name' => 'Religion'],
         ]);
     }
 }
