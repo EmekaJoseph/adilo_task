@@ -1,3 +1,11 @@
+
+//bootstrap@5.3.5
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+//bootstrap-icons
+import 'bootstrap-icons/font/bootstrap-icons.css'
+
 import './assets/main.css'
 
 import { createApp } from 'vue'
