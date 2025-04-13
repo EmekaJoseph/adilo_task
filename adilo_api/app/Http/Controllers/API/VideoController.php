@@ -11,9 +11,9 @@ use App\Jobs\ProcessVideo;
 class VideoController extends Controller
 {
     // GET /api/videos
-    public function index()
+    public function index(Request $req)
     {
-        $videos = Video::with(['user', 'category'])->paginate(10);
+        $videos = Video::select(['description', 'id', 'title', 'url'])->where('category_id', $req->category_id)->paginate(10);
         return response()->json([
             'success' => true,
             'data' => $videos

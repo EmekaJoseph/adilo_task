@@ -2,11 +2,16 @@
 import { $instance, $instanceForm } from './instances'
 
 export default {
-    allVidoes() {
-        return $instance.get(`/videos`)
+
+    categories() {
+        return $instance.get(`/categories`)
     },
 
-    getVideo(id: string) {
+    getVideos(page = 1, category_id = 1) {
+        return $instance.get(`/videos?page=${page}&category_id=${category_id}`)
+    },
+
+    getVideoDetails(id: string) {
         return $instance.get(`/videos/${id}`)
     },
 

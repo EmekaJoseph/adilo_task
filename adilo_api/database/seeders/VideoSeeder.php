@@ -20,11 +20,17 @@ class VideoSeeder extends Seeder
         $users = User::all();
         $categories = Category::all();
 
+        $videoUrls = [
+            'https://cdn.pixabay.com/video/2025/04/09/270940_large.mp4',
+            'https://cdn.pixabay.com/video/2024/12/15/246856_large.mp4',
+            'https://cdn.pixabay.com/video/2025/03/18/265501_large.mp4'
+        ];
+
         foreach (range(1, 20) as $i) {
             Video::create([
                 'title' => "Sample Video $i",
-                'description' => "Description for Video $i",
-                'url' => "https://example.com/video$i.mp4",
+                'description' => "This is the description for $i",
+                'url' => $videoUrls[array_rand($videoUrls)],
                 'user_id' => $users->random()->id,
                 'category_id' => $categories->random()->id,
             ]);

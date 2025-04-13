@@ -4,5 +4,7 @@ import { RouterView } from 'vue-router'
 
 <template>
   <vue3-progress-bar></vue3-progress-bar>
-  <RouterView />
+  <div class="pb-5">
+    <RouterView />
+  </div>
 </template>

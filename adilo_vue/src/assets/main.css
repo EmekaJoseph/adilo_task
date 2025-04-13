@@ -2,6 +2,20 @@
 
 
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+.hover-tiltY {
+  transition: all ease-in-out 0.4s;
+}
+
+
+.hover-tiltY:hover {
+  transform: translateY(-5px);
+}
+
 /* 
 @media (min-width: 1024px) {
   body {

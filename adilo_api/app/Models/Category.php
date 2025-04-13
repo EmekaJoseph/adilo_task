@@ -17,8 +17,8 @@ class Category extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function category()
+    public function videos()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Video::class);
     }
 }
