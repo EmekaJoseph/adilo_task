@@ -21,7 +21,7 @@
                         <div class="mt-5" v-if="videoStore.videoToShow.isLoading">
                             <ComponentLoading />
                         </div>
-                        <video v-if="videoStore.videoToShow.details.url" class="w-100 h-100" controls autoplay>
+                        <video v-else-if="videoStore.videoToShow.details.url" class="w-100 h-100" controls autoplay>
                             <source :src="videoStore.videoToShow.details.url" type="video/mp4">
                             <source :src="videoStore.videoToShow.details.url" type="video/ogg">
                             <source :src="videoStore.videoToShow.details.url" type="video/webm">

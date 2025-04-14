@@ -36,6 +36,7 @@ export const useVideosStore = defineStore('videosStore', () => {
   async function getVideoDetails() {
     videoToShow.isLoading = true
     const { data } = await api.getVideoDetails(clickedVideo.value.id)
+    videoToShow.details = data.data
     videoToShow.isLoading = false
   }
 
